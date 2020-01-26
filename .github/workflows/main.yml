@@ -1,0 +1,21 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Zip
+      uses: montudor/action-zip@v0.1.0
+      with:
+        args: zip -r ELE115.zip .idea root0 -x '**/.gitkeep'
+    - name: Release
+      uses: fnkr/github-action-ghr@v1
+      env:
+        GHR_PATH: ELE115.zip
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
