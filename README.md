@@ -24,7 +24,7 @@ After you have a **good** name, you can begin with the following:
 1. Open IntelliJ IDEA.
 1. Click `Create New Project`.
 1. In the left panel, select `User-defined`.
-1. In the right panel, select `ELE115-idea-gradle-template`.
+1. In the right panel, select `ELE115`.
 1. Click `Next`.
 1. In file `settings.gradle`, replace `<your-project-name>` with your project name.
 1. In file `build.gradle`, replace ALL occurancess of `<your_project_name>` with your project name,
