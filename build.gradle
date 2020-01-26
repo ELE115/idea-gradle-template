@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.github.ele115.<your_netid>'
+version = '0.0.0'
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+mainClassName = 'com.github.ele115.<your_netid>.<your_project_name>.Main'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'me.friwi:tello4j:1.0.2'
+    implementation 'com.github.b1f6c1c4:mac-to-ip:0.0.5'
+}
