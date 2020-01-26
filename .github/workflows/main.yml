@@ -13,7 +13,7 @@ jobs:
     - name: Zip
       uses: montudor/action-zip@v0.1.0
       with:
-        args: zip -r ELE115.zip .idea root0 -x '**/.gitkeep'
+        args: zip -r ELE115.zip .idea root0 -x root0/src/main/java/.gitkeep
     - name: Release
       uses: fnkr/github-action-ghr@v1
       env:
