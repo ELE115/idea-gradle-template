@@ -1,5 +1,7 @@
 # idea-gradle-template
 
+## 1 Naming is a hard problem
+
 Before you start, you must choose a **good** name for your project.
 Basic rules for getting a good name is as follow.
 Use hyphen to separate words. Only non-cap letters or numbers allowed. Don't start with a number or hyphen.
@@ -19,18 +21,111 @@ myfirstproject
 project123
 ```
 
-After you have a **good** name, you can begin with the following:
+## 2 Using the project templete
+
+Whenver you have a *good* name for your project, you can begin with the following:
 
 1. Open IntelliJ IDEA.
 1. Click `Create New Project`.
 1. In the left panel, select `User-defined`.
 1. In the right panel, select `ELE115`.
 1. Click `Next`.
+
+You should now see the IntelliJ IDEA workspace fully unwinded for you.
+But don't panic, and **don't touch anywhere** for now.
+Follow the instructions.
+
+**Note:** Please do **NOT** click `Import Gradle Project` for now.
+If you did, quit IntelliJ IDEA, delete your project, and start over from the beginning.
+
+## 3 Edit Gradle files
+
+To the left there is `Project` panel, in which you can see a list of files:
+
+* `.editorconfig`: Specifies your coding style - what is allowed and what is forbidden. *You don't need to touch it.*
+* `.gitignore`: What files should belongs to your program and what should not. *You don't need to touch it.*
+* `build.gradle`: This is the most important configuration file, denoting some key characteristics of your program: **You MUST modify this file**
+  * Which language is your program written in?
+  * Who wrote the program?
+  * Where should the program start running?
+  * Does the program depend on other programs? What are they? Where can I find them?
+* `gradlew`/`gradlew.bat`: These are auxiliary programs that reads `build.gradle` and compiles your program. *You don't need to touch it.*
+  * `gradlew` is for Linux and Mac OS users.
+  * `gradlew.bat` is for Windows users.
+* `settings.gradle`: This file records your program's name. **You MUST modify this file**.
+* `External Libraries`: This is *NOT* an actual file nor folder. IntelliJ IDEA will be listing all your dependencies here. *You don't need to touch it.*
+* `Scratches and Consoles`: This is *NOT* an actual file nor folder. IntelliJ IDEA allows you to store unused files here. *You don't need to touch it.*
+
+We need to manually modify some files before we can proceed.
+So follow the instructions:
+
 1. In file `settings.gradle`, replace `<your-project-name>` with your project name.
 1. In file `build.gradle`, replace ALL occurancess of `<your_project_name>` with your project name,
-but **using underscore instead of hyphen** to separate words.
+but **using underscores instead of hyphens** to separate words.
 1. In file `build.gradle`, replace ALL occurancess of `<your_netid>` with your netid.
 No capital characters.
+
+## 4 Import Gradle Project
+
+So now all Gradle-related stuffs are ready.
+At the bottom right corner of your workspace, there should be a box titled `IntelliJ IDEA found a Gradle build script`.
+In the box, click the `Import Gradle Project`.
+
+This process may take seconds to minutes to execute.
+What is happening is that `gradlew`/`gradlew.bat` is being executed and `build.gradle` is parsed.
+Gradle noticed that you are willing to use Tello controller libraries,
+so it is actively downloading it for you.
+The controller is, unfortunately, gigantic in its size: 800MiB in total!
+No wonder why it takes so long to download.
+
+Just sit and wait for the process to finish.
+
+**Note:** If you accidentally clicked `Skip` or closed the small box or just can't find such box, don't worry!
+There is a small magnifier icon at the top right corner of your workspace.
+Click the magnifier, and type `Import Gradle Project`.
+Hit enter and that it! Just wait for it to finish.
+
+After several minutes (or a fraction of second if this is not the very first time),
+you should notice two things:
+
+* To the right, there is a new panel `Gradle` popped up. **You need to make changes in it.**
+* To the left, your `Project` panel has changed. Files are grouped together.
+New files and folders appear:
+  * `.gradle` folder: this is where Gradle put some temporary files. *You don't need to touch it.*
+  * `.idea` folder: this is where IntelliJ IDEA put its files in. *You don't need to touch it.*
+  * `build` folder: this is where Gradle put its output files in. *You don't need to touch it.*
+  * `gradle` folder: internal settings for Gradle are stored here. *You don't need to touch it.*
+  * `src/main/java` folder: **Here is where you should put your program files in!**
+
+We start with the `Gradle` panel.
+
+1. Click on the triangle before your project (should be the only item) in the `Gradle` panel.
+1. Find `<your-project-name>`/`Tasks`/`application`/`run`.
+1. Right click on it, and choose `Create '<your-project-name> [run]'...`.
+1. Don't change any thing in the popped up dialog, simply click `OK`.
+1. It's advisable to minimize the `Gradle` panel, since you will never use it anymore.
+Just click the minus sign at the top right corner of the panel to minimize it.
+
+## 5 Start programming and have fun
+
+Congratulations!
+All your configurations have completed, we can commence coding!
+
+1. In `Project` panel, unfold `<your-project-name>`.
 1. In `Project` panel, right-click on the folder `src/main/java`, click `New`/`Java Class`.
 1. In the `New Java Class` dialog, fill in `Name` field by `com.github.ele115.<your_netid>.<your_project_name>.Main`.
-1. Start writing your program now!
+Remember, `<your_project_name>` should use underscores instead of hyphens to separate words.
+
+Start writing your program now!
+
+Whenver you want to execute your program,
+simply hit `Shift+F10`,
+or click the little green triangle at the top right corner of your workspace.
+IntelliJ IDEA will launch `gradlew`/`gradlew.bat`, which will do the following:
+
+* Parse `build.gradle`, understand what's going on
+* Download newly added dependencies for you (if you request more)
+* Compile your program
+* Execute your program from the specified entrance
+
+At the bottom you can see the output of Gradle, middle of which is your program's output.
