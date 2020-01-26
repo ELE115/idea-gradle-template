@@ -35,6 +35,8 @@ You should now see the IntelliJ IDEA workspace fully unwinded for you.
 But don't panic, and **don't touch anywhere** for now.
 Follow the instructions.
 
+**Note:** If you see `Tips of the day` dialog, simply click `Close`.
+
 **Note:** Please do **NOT** click `Import Gradle Project` for now.
 If you did, quit IntelliJ IDEA, delete your project, and start over from the beginning.
 
@@ -58,6 +60,8 @@ To the left there is `Project` panel, in which you can see a list of files:
 
 We need to manually modify some files before we can proceed.
 So follow the instructions:
+
+**Note:** If you see `Non-Project Files Protection` dialog, simply click `OK`.
 
 1. In file `settings.gradle`, replace `<your-project-name>` with your project name.
 1. In file `build.gradle`, replace ALL occurancess of `<your_project_name>` with your project name,
@@ -93,7 +97,7 @@ you should notice two things:
 New files and folders appear:
   * `.gradle` folder: this is where Gradle put some temporary files. *You don't need to touch it.*
   * `.idea` folder: this is where IntelliJ IDEA put its files in. *You don't need to touch it.*
-  * `build` folder: this is where Gradle put its output files in. *You don't need to touch it.*
+  * `build` folder (you may not see it now, but you will see it soon): this is where Gradle put its output files in. *You don't need to touch it.*
   * `gradle` folder: internal settings for Gradle are stored here. *You don't need to touch it.*
   * `src/main/java` folder: **Here is where you should put your program files in!**
 
