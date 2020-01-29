@@ -1,6 +1,4 @@
-# idea-gradle-template
-
-## 1 Naming is a hard problem
+## 1: Naming is a hard problem
 
 Before you start, you must choose a **good** name for your project.
 Basic rules for getting a good name is as follow.
@@ -21,7 +19,7 @@ myfirstproject
 project123
 ```
 
-## 2 Using the project templete
+## 2: Use the project templete
 
 Whenver you have a *good* name for your project, you can begin with the following:
 
@@ -40,7 +38,7 @@ Follow the instructions.
 **Note:** Please do **NOT** click `Import Gradle Project` for now.
 If you did, quit IntelliJ IDEA, delete your project, and start over from the beginning.
 
-## 3 Edit Gradle files
+## 3: Edit Gradle files
 
 To the left there is `Project` panel, in which you can see a list of files:
 
@@ -69,7 +67,7 @@ but **using underscores instead of hyphens** to separate words.
 1. In file `build.gradle`, replace ALL occurancess of `<your_netid>` with your netid.
 No capital characters.
 
-## 4 Import Gradle Project
+## 4: Import Gradle Project
 
 So now all Gradle-related stuffs are ready.
 At the bottom right corner of your workspace, there should be a box titled `IntelliJ IDEA found a Gradle build script`.
@@ -110,7 +108,7 @@ We start with the `Gradle` panel.
 1. It's advisable to minimize the `Gradle` panel, since you will never use it anymore.
 Just click the minus sign at the top right corner of the panel to minimize it.
 
-## 5 Start programming and have fun
+## 5: Start programming and have fun
 
 Congratulations!
 All your configurations have completed, we can commence coding!
