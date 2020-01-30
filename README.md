@@ -38,6 +38,8 @@ You should now see the IntelliJ IDEA workspace fully unwinded for you.
 But don't panic, and **don't touch anywhere** for now.
 Follow the instructions.
 
+**Note:** If you see `Invalid VCS root mapping` prompt, simply close it.
+
 **Note:** If you see `Tips of the day` dialog, simply click `Close`.
 
 **Note:** Please do **NOT** click `Import Gradle Project` for now.
@@ -121,7 +123,18 @@ Just click the minus sign at the top right corner of the panel to minimize it.
 
 **Note:** Don't *double click* on the `run`. If you already did, then just ignore the error messages and move on.
 
-## 5: Start programming and have fun
+## 5: Setup Git
+
+**Note:** This step is optional if this project is **NOT** a course lab.
+However, we do encourage everyone to use Git to manage their development process.
+
+Please follow the [Guide on setting up Git](https://github.com/ELE115/docs/blob/master/git.md#how-to-setup-git-for-a-single-project).
+
+It is **highly recommanded** that you [Create a commit](https://github.com/ELE115/docs/blob/master/git.md#how-to-setup-git-for-a-single-project)
+**immediately after** you *Import Gradle Project*
+and **right before** you add any single line of Java code.
+
+## 6: Start programming and have fun
 
 Congratulations!
 All your configurations have completed, we can commence coding!
