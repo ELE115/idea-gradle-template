@@ -28,6 +28,8 @@ Whenver you have a *good* name for your project, you can begin with the followin
 1. In the left panel, select `User-defined`.
 1. In the right panel, select `ELE115`.
 1. Click `Next`.
+1. Type your project's **name**.
+1. Click `Finish`.
 
 **Note:** If you don't see `User-defined`, checkout
 [Setup Guide 3.2: Download ELE115 project template](https://github.com/ELE115/docs/blob/master/setup.md#32-download-ele115-project-template).
@@ -53,8 +55,8 @@ To the left there is `Project` panel, in which you can see a list of files:
   * Where should the program start running?
   * Does the program depend on other programs? What are they? Where can I find them?
 * `gradlew`/`gradlew.bat`: These are auxiliary programs that reads `build.gradle` and compiles your program. *You don't need to touch it.*
-  * `gradlew` is for Linux and Mac OS users.
-  * `gradlew.bat` is for Windows users.
+  * `gradlew` is for Linux and Mac OS users. Do *NOT* remove this file, even if you are not using Linux or Mac OS.
+  * `gradlew.bat` is for Windows users. Do *NOT* remove this file, even if you are not using Windows.
 * `settings.gradle`: This file records your program's name. **You MUST modify this file**.
 * `External Libraries`: This is *NOT* an actual file nor folder. IntelliJ IDEA will be listing all your dependencies here. *You don't need to touch it.*
 * `Scratches and Consoles`: This is *NOT* an actual file nor folder. IntelliJ IDEA allows you to store unused files here. *You don't need to touch it.*
@@ -69,6 +71,12 @@ So follow the instructions:
 but **using underscores instead of hyphens** to separate words.
 1. In file `build.gradle`, replace ALL occurancess of `<your_netid>` with your netid.
 No capital characters.
+
+**Note:** Make sure to remove `<` and `>`. For example:
+
+```gradle
+mainClassName = 'com.github.ele115.b1f6c1c4.my_project.Main'
+```
 
 ## 4: Import Gradle Project
 
@@ -93,7 +101,7 @@ Hit enter and that it! Just wait for it to finish.
 After several minutes (or a fraction of second if this is not the very first time),
 you should notice two things:
 
-* To the right, there is a new panel `Gradle` popped up. **You need to make changes in it.**
+* To the **right** of your entire workspace, there is a new panel `Gradle` popped up. **You need to make changes in it.**
 * To the left, your `Project` panel has changed. Files are grouped together.
 New files and folders appear:
   * `.gradle` folder: this is where Gradle put some temporary files. *You don't need to touch it.*
@@ -110,6 +118,8 @@ We start with the `Gradle` panel.
 1. Don't change any thing in the popped up dialog, simply click `OK`.
 1. It's advisable to minimize the `Gradle` panel, since you will never use it anymore.
 Just click the minus sign at the top right corner of the panel to minimize it.
+
+**Note:** Don't *double click* on the `run`. If you already did, then just ignore the error messages and move on.
 
 ## 5: Start programming and have fun
 
