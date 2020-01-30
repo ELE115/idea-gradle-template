@@ -29,6 +29,9 @@ Whenver you have a *good* name for your project, you can begin with the followin
 1. In the right panel, select `ELE115`.
 1. Click `Next`.
 
+**Note:** If you don't see `User-defined`, checkout
+[Setup Guide 3.2: Download ELE115 project template](https://github.com/ELE115/docs/blob/master/setup.md#32-download-ele115-project-template).
+
 You should now see the IntelliJ IDEA workspace fully unwinded for you.
 But don't panic, and **don't touch anywhere** for now.
 Follow the instructions.
