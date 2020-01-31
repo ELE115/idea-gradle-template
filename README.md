@@ -81,8 +81,6 @@ To the left there is `Project` panel, in which you can see a list of files:
 We need to manually modify some files before we can proceed.
 So follow the instructions:
 
-**Note:** If you see `Non-Project Files Protection` dialog, simply click `OK`.
-
 1. In file `settings.gradle`, replace `<your-project-name>` with your project name.
 1. In file `build.gradle`, replace ALL occurancess of `<your_project_name>` with your project name,
 but **using underscores instead of hyphens** to separate words.
@@ -90,10 +88,13 @@ but **using underscores instead of hyphens** to separate words.
 No capital characters.
 
 **Note:** Make sure to remove `<` and `>`. For example:
-
 ```gradle
 mainClassName = 'com.github.ele115.b1f6c1c4.my_project.Main'
 ```
+
+**Note:** If you see `Non-Project Files Protection` dialog, simply click `OK`.
+
+*Please double check: your project name in `mainClassName` has* **underscores** *instead of hyphens.*
 
 ## 4: Import Gradle Project
 
