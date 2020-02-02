@@ -71,6 +71,7 @@ To the left there is `Project` panel, in which you can see a list of files:
   * Who wrote the program?
   * Where should the program start running?
   * Does the program depend on other programs? What are they? Where can I find them?
+* `gradle.properties`: This file tweaks some auxiliary features in Gradle. *You don't need to touch it.*
 * `gradlew`/`gradlew.bat`: These are auxiliary programs that reads `build.gradle` and compiles your program. *You don't need to touch it.*
   * `gradlew` is for Linux and Mac OS users. Do *NOT* remove this file, even if you are not using Linux or Mac OS.
   * `gradlew.bat` is for Windows users. Do *NOT* remove this file, even if you are not using Windows.
