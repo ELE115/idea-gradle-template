@@ -129,16 +129,17 @@ New files and folders appear:
   * `gradle` folder: internal settings for Gradle are stored here. *You don't need to touch it.*
   * `src/main/java` folder: **Here is where you should put your program files in!**
 
-We start with the `Gradle` panel.
+You may minimize the Gradle panel since we are not going to use it -
+just click the minus sign at the top right corner of the panel to minimize it.
 
-1. Click on the triangle before your project (should be the only item) in the `Gradle` panel.
-1. Find `<your-project-name>`/`Tasks`/`application`/`run`.
-1. Right click on it, and choose `Create '<your-project-name> [run]'...`.
-1. Don't change any thing in the popped up dialog, simply click `OK`.
-1. It's advisable to minimize the `Gradle` panel, since you will never use it anymore.
-Just click the minus sign at the top right corner of the panel to minimize it.
+Now, click the blue triangle at the top right corner of your workspace.
+A dialog should prompt out, and you shall click `YES`, `YES`, and then `OK`.
 
-**Note:** Don't *double click* on the `run`. If you already did, then just ignore the error messages and move on.
+**Note:** If you can't find the blue triangle, maybe you forgot to
+[Install the plugin](https://github.com/ELE115/docs/blob/master/setup.md#35-install-plugins).
+
+**Note:** If you only see one error dialog, maybe you installed the wrong version of the plugin.
+Please consult TA for such issue.
 
 ## 5: Setup Git
 
