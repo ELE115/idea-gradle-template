@@ -62,7 +62,24 @@ If you did, quit IntelliJ IDEA, delete your project, and start over from the beg
 
 ## 3: Edit Gradle files
 
-To the left there is `Project` panel, in which you can see a list of files:
+To the left there is `Project` panel, in which you can see a list of files.
+We need to manually modify some files (double click on a file to open it) before we can proceed.
+So follow the instructions:
+
+1. In file `settings.gradle`, replace `<your-project-name>` with your project name.
+1. In file `build.gradle`, replace ALL occurancess of `<your_project_name>` with your project name,
+but **using underscores instead of hyphens** to separate words.
+1. In file `build.gradle`, replace ALL occurancess of `<your_netid>` with your netid.
+No capital characters.
+
+**Note:** Make sure to remove `<` and `>`. For example:
+```gradle
+mainClassName = 'com.github.ele115.b1f6c1c4.my_project.Main'
+```
+
+**Note:** If you see `Non-Project Files Protection` dialog, simply click `OK`.
+
+Just for your curiousity:
 
 * `.editorconfig`: Specifies your coding style - what is allowed and what is forbidden. *You don't need to touch it.*
 * `.gitignore`: What files should belongs to your program and what should not. *You don't need to touch it.*
@@ -79,25 +96,9 @@ To the left there is `Project` panel, in which you can see a list of files:
 * `External Libraries`: This is *NOT* an actual file nor folder. IntelliJ IDEA will be listing all your dependencies here. *You don't need to touch it.*
 * `Scratches and Consoles`: This is *NOT* an actual file nor folder. IntelliJ IDEA allows you to store unused files here. *You don't need to touch it.*
 
-We need to manually modify some files before we can proceed.
-So follow the instructions:
-
-1. In file `settings.gradle`, replace `<your-project-name>` with your project name.
-1. In file `build.gradle`, replace ALL occurancess of `<your_project_name>` with your project name,
-but **using underscores instead of hyphens** to separate words.
-1. In file `build.gradle`, replace ALL occurancess of `<your_netid>` with your netid.
-No capital characters.
-
-**Note:** Make sure to remove `<` and `>`. For example:
-```gradle
-mainClassName = 'com.github.ele115.b1f6c1c4.my_project.Main'
-```
-
-**Note:** If you see `Non-Project Files Protection` dialog, simply click `OK`.
+## 4: Import Gradle Project
 
 *Please double check: your project name in `mainClassName` has* **underscores** *instead of hyphens.*
-
-## 4: Import Gradle Project
 
 So now all Gradle-related stuffs are ready.
 At the bottom right corner of your workspace, there should be a box titled `IntelliJ IDEA found a Gradle build script`.
@@ -116,11 +117,12 @@ Just sit and wait for the process to finish.
 There is a small magnifier icon at the top right corner of your workspace.
 Click the magnifier, and type `Import Gradle Project`.
 Hit enter and that it! Just wait for it to finish.
+Conatct TA if you don't see `Import Gradle Project` (exact words) there.
 
 After several minutes (or a fraction of second if this is not the very first time),
 you should notice two things:
 
-* To the **right** of your entire workspace, there is a new panel `Gradle` popped up. **You need to make changes in it.**
+* To the **right** of your entire workspace, there is a new panel `Gradle` popped up. **You may ignore this panel**
 * To the left, your `Project` panel has changed. Files are grouped together.
 New files and folders appear:
   * `.gradle` folder: this is where Gradle put some temporary files. *You don't need to touch it.*
@@ -143,7 +145,7 @@ Please consult TA for such issue.
 
 ## 5: Setup Git
 
-**Note:** This step is optional if this project is **NOT** a course lab.
+**Note:** If you are creating a project simply for fun, then you *may* ignore this step.
 However, we do encourage everyone to use Git to manage their development process.
 
 Please follow the [Guide on setting up Git](https://github.com/ELE115/docs/blob/master/git.md#how-to-setup-git-for-a-single-project).
@@ -157,6 +159,7 @@ and **right before** you add any single line of Java code.
 Congratulations!
 All your configurations have completed, we can commence coding!
 
+**To start coding, follow the instructions:**
 1. In `Project` panel, unfold `<your-project-name>`.
 1. In `Project` panel, right-click on the folder `src/main/java`, click `New`/`Java Class`.
 1. In the `New Java Class` dialog, fill in `Name` field by `com.github.ele115.<your_netid>.<your_project_name>.Main`.
