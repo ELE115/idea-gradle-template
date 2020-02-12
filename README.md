@@ -57,8 +57,8 @@ Follow the instructions.
 
 **Note:** If you see `Tips of the day` dialog, simply click `Close`.
 
-**Note:** Please do **NOT** click `Import Gradle Project` for now.
-If you did, quit IntelliJ IDEA, delete your project, and start over from the beginning.
+**Note:** We recommend **NOT TO** click `Import Gradle Project` for now.
+However, if you did, you can reimport it as described in Step 4.
 
 ## 3: Edit Gradle files
 
