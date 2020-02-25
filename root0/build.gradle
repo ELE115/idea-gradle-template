@@ -16,8 +16,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.ele115:tello-wrapper:1.+'
-    implementation 'me.friwi:tello4j:1.+'
+    implementation 'com.github.ele115:tello-wrapper:2.+'
 }
 
 run {
